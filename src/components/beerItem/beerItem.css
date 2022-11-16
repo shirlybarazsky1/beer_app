@@ -1,0 +1,112 @@
+.card,
+.card_back {
+  width: 397px;
+  height: 740px;
+  margin: 3em auto;
+}
+
+.card_front {
+  position: relative;
+  padding: 0 1em;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.container:hover .card,
+.container.hover {
+  transform: rotateY(-180deg);
+}
+
+.card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card_front,
+.card_back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card_front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card_back {
+  transform: rotateY(-180deg);
+}
+
+.image_url {
+  width: 50px;
+}
+
+.card_beer {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  text-size-adjust: auto;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+  display: flex;
+}
+
+.header {
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+}
+
+.header h1 {
+  display: flex;
+  font-size: 15px;
+}
+
+.header h2 {
+  font-size: 15px;
+}
+
+.date {
+  font-size: 15px;
+  display: inline;
+  float: left;
+  line-height: 20px;
+  justify-content: space-between;
+  width: 50%;
+  text-align: left;
+}
+
+.info {
+  font-size: 15px;
+  display: inline;
+  float: left;
+  line-height: 20px;
+  justify-content: space-between;
+  width: 50%;
+  text-align: left;
+}
+
+.title {
+  font-size: 15px;
+  float: left;
+  color: rgb(109, 109, 114);
+  line-height: 20px;
+  justify-content: space-between;
+  width: 30%;
+  display: flex;
+}
+
+.image {
+  width: 400px;
+}

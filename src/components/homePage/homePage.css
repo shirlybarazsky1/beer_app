@@ -1,0 +1,60 @@
+.logo {
+  background: url("../../image/topBeerApp.jpg");
+  font-size: 45px;
+  color: #009879;
+  padding-top: 0.06px;
+}
+
+.tilt-right {
+  transform: rotate(10deg) translateY(-0.5rem);
+  animation: moveDown 2s linear infinite;
+}
+
+.logo big-logo {
+  margin-bottom: 2rem;
+}
+
+.logo span {
+  display: inline-block;
+}
+
+.logo .tilt-right {
+  transform: rotate(10deg) translateY(-0.5rem);
+  animation: moveDown 2s linear infinite;
+}
+
+.logo .tilt-left {
+  transform: rotate(-10deg) translateY(0.5rem);
+  animation: moveUp 2s linear infinite;
+}
+
+.go_top_btn {
+  background: #009879;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  border-radius: 5px;
+}
+
+.go_top_btn:hover,
+.go_top_btn:focus {
+  opacity: 0.5;
+}
+
+@keyframes moveDown {
+  50% {
+    transform: rotate(10deg) translateY(0.5rem);
+  }
+}
+@keyframes moveUp {
+  50% {
+    transform: rotate(-10deg) translateY(-0.5rem);
+  }
+}
