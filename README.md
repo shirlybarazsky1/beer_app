@@ -4,5 +4,5 @@
 - run ```cd beer_app``` to get into the clone project.
 - run ```npm install``` to install the dependencies.
 - To run react, please use the cmmand ```npm start```
-Next you'll need to edit config.js file with your connection string to your mongoDB.
+
 running on [http://localhost:3000] and you can start testing it out:)
