@@ -1,4 +1,5 @@
 import BeerItem from "../beerItem/beerItem";
+import imageUrlNull from "../../image/keg.png";
 import "./beerList.css";
 
 export default function BeerList({ beers }) {
@@ -16,7 +17,9 @@ export default function BeerList({ beers }) {
                 first_brewed={beer.first_brewed}
                 description={beer.description}
                 brewers_tips={beer.brewers_tips}
-                image_url={beer.image_url}
+                image_url={
+                  beer.image_url != null ? beer.image_url : imageUrlNull
+                }
               />
             );
           })}

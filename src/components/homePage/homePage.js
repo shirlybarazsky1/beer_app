@@ -13,13 +13,17 @@ export default function HomePage() {
   const per_page = 72;
 
   useEffect(() => {
+    fetchData(page);
+  }, []);
+
+  const fetchData = (page) => {
     axios
       .get(`${API_URL}page=${page}&per_page=${per_page}`)
       .then((response) => {
         setBeers(response.data);
         setIsLoading(false);
       });
-  });
+  };
 
   return (
     <div>
@@ -46,6 +50,7 @@ export default function HomePage() {
             setPage={setPage}
             setIsLoading={setIsLoading}
             setSearch={setSearch}
+            fetchData={fetchData}
           />
           <BeerList
             beers={beers.filter(
@@ -60,7 +65,7 @@ export default function HomePage() {
         rel="stylesheet"
         href="https://fontawesome.com/icons/arrow-up?s=solid&f=sharp"
       />
-      <a class="go_top_btn" href="#">
+      <a className="go_top_btn" href="#">
         ⬆
       </a>
     </div>

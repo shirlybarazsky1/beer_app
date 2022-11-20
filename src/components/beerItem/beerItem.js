@@ -11,8 +11,8 @@ export default function BeerItem({
 }) {
   return (
     <div>
-      <div class="container" ontouchstart="this.classList.toggle('hover');">
-        <div class="card">
+      <div className="container">
+        <div className="card">
           <img src={image_url} alt={image_url} className="image_url" />
           <div>
             <h2>
@@ -20,7 +20,7 @@ export default function BeerItem({
             </h2>
             <h2>{tagline}</h2>
           </div>
-          <div class="card_back">
+          <div className="card_back">
             <div className="card_beer">
               <div>
                 <div className="header">

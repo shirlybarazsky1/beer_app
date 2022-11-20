@@ -1,19 +1,29 @@
 import "./navBar.css";
 
-export default function NavBar({ setPage, page, setIsLoading, setSearch }) {
+export default function NavBar({
+  setPage,
+  page,
+  setIsLoading,
+  setSearch,
+  fetchData,
+}) {
   const onChangeSearch = (value) => {
     if (value == null) setSearch("ALL");
     setSearch(value);
   };
   const onNext = () => {
     setIsLoading(true);
-    setPage(page + 1);
+    const nextPage = page + 1;
+    setPage(nextPage);
     setSearch("ALL");
+    fetchData(nextPage);
   };
   const onPrevious = () => {
     setIsLoading(true);
-    setPage(page - 1);
+    const previousPage = page - 1;
+    setPage(previousPage);
     setSearch("ALL");
+    fetchData(previousPage);
   };
 
   return (
@@ -45,7 +55,7 @@ export default function NavBar({ setPage, page, setIsLoading, setSearch }) {
           className="searchBar__input"
         />
         <button type="submit" className="searchBar__button">
-          <i class="material-icons">search</i>
+          <i className="material-icons">search</i>
         </button>
       </div>
     </div>
